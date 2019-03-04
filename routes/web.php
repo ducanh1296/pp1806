@@ -28,4 +28,7 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/orders', 'OrdersController@store')->name('orders.store');
     Route::get('/orders/create', 'OrdersController@create')->name('orders.create');
+
+    Route::get('/products', 'ProductsController@index')->name('products.index');
+    Route::delete('/products/{product}', 'ProductsController@destroy')->name('products.destroy');
 });
